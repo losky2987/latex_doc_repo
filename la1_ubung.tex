@@ -195,7 +195,7 @@
 	\subsection*{Aufgabe 1}
 	\begin{enumerate}[label=(\alph*)]
 		\item Bilden Sie die folgenden Produkte: $$(2X^{2} + 4X + 1) \cdot (4X^{2} + X) \in \mathbb{Z}[X]$$  $$([1]X^{2} + [1]X + [1]) \cdot ([1]X^{2} + [1]X) \in (\mathbb{Z}/2\mathbb{Z})[X]$$  $$([1]X^{2} + [5]X + [4]) \cdot ([4]X^{2} + [3]X + [2]) \in (\mathbb{Z}/3\mathbb{Z})[X]$$
-		\item Zeigen Sie: Die Polynome $$P = [1]X^{3} + [1]X^{2} + [2]X + [1]$$ und $$Q = [1]X^{2} + [1]$$ sind verschiedene Elemente von $(\mathbb{Z}/3\mathbb{Z})[X]$, aber definieren die gleiche Funktion $\mathbb{Z}/3\mathbb{Z} \to \mathbb{Z}/3\mathbb{Z}$ (d.h. $ev(P) = ev(Q)$).
+		\item Zeigen Sie: Die Polynome $$P = [1]X^{3} + [1]X^{2} + [2]X + [1] \text{ und } Q = [1]X^{2} + [1]$$ sind verschiedene Elemente von $(\mathbb{Z}/3\mathbb{Z})[X]$, aber definieren die gleiche Funktion $\mathbb{Z}/3\mathbb{Z} \to \mathbb{Z}/3\mathbb{Z}$ (d.h. $ev(P) = ev(Q)$).
 		\item Finden Sie für die Polynome $A,B \in \mathbb{Z}[X]$ jeweils Polynome $Q,S \in \mathbb{Z}[X]$ mit $deg(S) < deg(B)$, sodass gilt $A = Q \cdot B + S$: $$A = X^{3} - 3X^{2} + 2X, B = X - 1$$  $$A = 5X^{2} + 3X - 12, B = X - 4$$
 	\end{enumerate}
 	
@@ -327,6 +327,59 @@
 	\end{enumerate}
 	
 	\newpage
+	
+	\section*{Übung 11 - 2026 Jan. 14}
+	
+	\subsection*{Aufgabe 1}
+	Bestimmen Sie das Inverse der reellen Matrix $$A = \begin{pmatrix} 1 & 1 & 1 \\ 2 & -1 & -1 \\ 1 & 2 & -1 \end{pmatrix}.$$
+	
+	\subsection*{Aufgabe 2}
+	Bestimmen Sie den Rang der reellen Matrix $$A = \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & 2 & 3 & 4 \\ 1 & 4 & 9 & 16 \\ 1 & 8 & 27 & 64 \end{pmatrix}.$$ Für welche $\underbar{b} \in \mathbb{R}^{4}$ ist das lineare Gleichungssystem $A \cdot \underbar{x} = \underbar{b}$ lösbar?
+	
+	\subsection*{Aufgabe 3}
+	Bestimmen Sie die reelle Matrix $$A = \begin{pmatrix} 1 & 1 & 1 & 1 & 1 \\ 1 & 0 & 1 & 0 & 1 \\ 2 & 3 & 4 & 5 & 6 \\ 0 & 2 & 2 & 4 & 4 \end{pmatrix}$$ sowie die Vektoren $$\underbar{b} = \begin{pmatrix} 1 \\ 1 \\ 1 \\ 1  \end{pmatrix} \in \mathbb{R}^{4} \text{ und } \underbar{b'} = \begin{pmatrix} 1 \\ 1 \\ 1 \\ -1 \end{pmatrix} \in \mathbb{R}^{4}$$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Bestimmen Sie die Lösungen des linearen Gleichungssystems $A \cdot \underbar{x} = \underbar{0}$.
+		\item Bestimmen Sie die Lösungen des linearen Gleichungssystems $A \cdot \underbar{x} = \underbar{b}$.
+		\item Bestimmen Sie die Lösungen des linearen Gleichungssystems $A \cdot \underbar{x} = \underbar{b'}$.
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 12 - 2026 Jan. 21}
+	
+	\subsection*{Aufgabe 1}
+	Betrachten Sie die beiden Basen $$B = (\begin{pmatrix} 1 \\ 1 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \end{pmatrix}) \text{ und } C = (\begin{pmatrix} 5 \\ 2 \end{pmatrix}, \begin{pmatrix} 2 \\ 1 \end{pmatrix})$$ des $\mathbb{R}$-Vektorraums $\mathbb{R}^{2}$ sowie die $\mathbb{R}$-lineare Abbildung $$f: \mathbb{R}^{2} \to \mathbb{R}^{2}, \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x+y \\ 2x+4y \end{pmatrix}$$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Bestimmen Sie die Darstellungsmatrix ${}_{B}M_{B}(f)$ von $f$.
+		\item Bestimmen Sie die Darstellungsmatrix ${}_{C}M_{C}(f)$ von $f$.
+		\item Bestimmen Sie die Darstellungsmatrix ${}_{C}M_{B}(f)$ von $f$.
+		\item Bestimmen Sie die Darstellungsmatrix ${}_{B}M_{C}(f)$ von $f$.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Betrachten Sie die beiden Basen $$B = (\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix} 2 \\ 2 \end{pmatrix}) \text{ und } C = (\begin{pmatrix} 0 \\ 1 \end{pmatrix}, \begin{pmatrix} -1 \\ 1 \end{pmatrix})$$ des $\mathbb{R}$-Vektorraums $\mathbb{R}^{2}$. Sei $g: \mathbb{R}^{2} \to \mathbb{R}^{2}$ die $\mathbb{R}$-lineare Abbildung mit Darstellungsmatrix $${}_{B}M_{B}(g) = \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix}$$ bezüglich der Basis $B$. Bestimmen Sie die Darstellungsmatrix ${}_{C}M_{C}(g)$ von $g$ bezüglich der Basis $C$.
+	
+	\subsection*{Aufgabe 3}
+	Berechnen Sie die Determinante der folgenden reellen Matrizen: $$\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \begin{pmatrix} 2 & 4 \\ 5 & 3 \end{pmatrix}, \begin{pmatrix} 1 & 2 & 2 \\ 1 & 0 & 1 \\ 2 & 0 & 4 \end{pmatrix}, \begin{pmatrix} 3 & 1 & 1 \\ 2 & 3 & 1 \\ 0 & 2 & 1 \end{pmatrix}$$
+	
+	\newpage
+	
+	\section*{Übung 13 - 2026 Feb. 4}
+	
+	\subsection*{Aufgabe 1}
+	Untersuchen Sie die folgenden reellen Matrizen auf Diagonalisierbarkeit: $$\begin{pmatrix} 1 & 4 \\ -1 & 1 \end{pmatrix}, \begin{pmatrix} 2 & 1 \\ 4 & 2 \end{pmatrix}, \begin{pmatrix} 3 & -1 \\ 1 & 3 \end{pmatrix}, \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$$
+	
+	\subsection*{Aufgabe 2}
+	Untersuchen Sie die folgende reelle Matrix auf Diagonalisierbarkeit: $$\begin{pmatrix} 1 & 2 & 2 \\ 2 & 2 & 1 \\ 2 & 1 & 2 \end{pmatrix}.$$ Falls die Matrix diagonalisierbar ist, bestimmen Sie auch eine Basis von $\mathbb{R}^{3}$ aus Eigenvektoren der Matrix.
+	
+	\subsection*{Aufgabe 3}
+	Sei $K$ ein Körper und $m,n \in \mathbb{N}$. Beweisen Sie die folgenden Aussagen:
+	\begin{enumerate}[label=(\alph*)]
+		\item Äquivalenz definiert eine Äquivalenzrelation auf der Menge $Mat_{K}(m \times n)$.
+		\item Ähnlichkeit definiert eine Äquivalenzrelation auf der Menge $Mat_{K}(n \times n)$.
+		\item Sind $A, A' \in Mat_{K}(n \times n)$ ähnlich, so haben sie dieselbe Determinante, d.h. $det(A) = det(A')$.
+	\end{enumerate}
 	
 	
 \end{document}
