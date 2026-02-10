@@ -265,5 +265,68 @@
 		\item Was ist die Dimension von $U_{1} + U_{2}$?
 	\end{enumerate}
 	
+	\subsection*{Aufgabe 3}
+	Sei $V$ ein $\mathbb{R}$-Vektorraum und $f: V \to V$ eine $\mathbb{R}$-lineare Abbildung mit $f \circ f = id_{V}$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Zeigen Sie, dass $V_{+} := \{v \in V \mid f(x) = v\}$ und $V_{-} := \{v \in V \mid f(x) = -v\}$ $\mathbb{R}$-Untervektorräume von $V$ sind.
+		\item Zeigen Sie, dass $V = V_{+} + V_{-}$ und $V_{+} \cap V_{-} = \{0\}$ gilt.
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 9 - 2025 Dez. 17}
+	
+	\subsection*{Aufgabe 1}
+	Bestimmen Sie die Matrizen der folgenden $\mathbb{R}$-linearen Abbildungen:
+	\begin{enumerate}[label=(\alph*)]
+		\item $f_{1}: \mathbb{R}^{2} \to \mathbb{R}^{2}, \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} 2x+y \\ x+y \end{pmatrix}$
+		\item $f_{2}: \mathbb{R}^{2} \to \mathbb{R}^{3}, \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x+2y \\ y \\ 2x \end{pmatrix}$
+		\item $f_{3}: \mathbb{R}^{3} \to \mathbb{R}^{2}, \begin{pmatrix} x \\ y \\ z \end{pmatrix} \mapsto \begin{pmatrix} x-y+z \\ y-z \end{pmatrix}$
+		\item $f_{4}: \mathbb{R}^{3} \to \mathbb{R}^{3}, \begin{pmatrix} x \\ y \\ z \end{pmatrix} \mapsto \begin{pmatrix} 2y-z \\ -x+2z \\ 2x-y \end{pmatrix}$
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Welche der durch die folgenden Matrizen definierten $\mathbb{R}$-linearen Abbildungen $\mathbb{R}^{2} \to \mathbb{R}^{2}$ sind injektiv? Welche surjektiv?
+	\begin{enumerate}[label=(\alph*)]
+		\item $A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$
+		\item $B = \begin{pmatrix} 2 & 4 \\ 2 & 4 \end{pmatrix}$
+		\item $C = \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}$
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Seien $m,n \in \mathbb{N}_{0}$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Zeigen Sie: Falls $n > m$, so gibt es keine injektive $\mathbb{R}$-lineare Abbildung $\mathbb{R}^{n} \to \mathbb{R}^{m}$.
+		\item Zeigen Sie: Falls $m > n$, so gibt es keine surjektive $\mathbb{R}$-lineare Abbildung $\mathbb{R}^{n} \to \mathbb{R}^{m}$.
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 10 - 2026 Jan. 7}
+	
+	\subsection*{Aufgabe 1}
+	Bringen Sie die reelle Matrix $$A = \begin{pmatrix} 1 & 1 & 1 \\ 2 & -1 & -1 \\ 1 & 2 & -1 \end{pmatrix}$$ in Zeilenstufenform, in Zeilennormalform und in Normalform.
+	
+	\subsection*{Aufgabe 2}
+	Wir betrachten den $\mathbb{R}$-Vektorraum $Mat_{\mathbb{R}}(2 \times 2)$ aller reellen $2 \times 2$-Matrizen sowie die Teilmenge $U = \{\begin{pmatrix} a & b \\ -b & a \end{pmatrix} \mid a,b \in \mathbb{R}\}$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Zeigen Sie, dass $U$ ein Untervektorruam von $Mat_{\mathbb{R}}(2 \times 2)$ ist.
+		\item Finden Sie eine Basis des Untervektorraums $U$.
+		\item Zeigen Sie, dass $AB = BA$ für alle $A,B \in U$ gilt.
+		\item Zeigen Sie: Ist $A \in U$ invertierbar, so gilt auch $A^{-1} \in U$.
+		\item Sei $\begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix} \in U$ mit $a \in \mathbb{R}$. Gilt dann $AB = BA$ für alle $B = Mat_{\mathbb{R}}(2 \times 2)$?
+		\item Sei $\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \in U$. Gilt dann $AB = BA$ für alle $B = Mat_{\mathbb{R}}(2 \times 2)$?
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Eine Abbildung $f: \mathbb{N} \to \mathbb{R}$ heißt auch reelle Folge. Die Menge $Abb(\mathbb{N}, \mathbb{R})$ aller reeller Folgen ist bezüglich der punktweisen Addition und Skalarmultiplikation ein $\mathbb{R}$-Vektorraum.
+	\begin{enumerate}[label=(\alph*)]
+		\item Geben Sie eine Basis des $\mathbb{R}$-Vektorraums $Abb(\mathbb{N}, \mathbb{R})$ an.
+		\item Eine Folge $f: \mathbb{N} \to \mathbb{R}$ heißt Fibonacci-Folge, falls $f(n) = f(n-1) + f(n-2)$ für alle $n \geqslant 3$ gilt. Zeigen Sie, dass die Menge $\mathcal{F}$ aller Fibonacci-Folgen ein Untervektorraum von $Abb(\mathbb{N}, \mathbb{R})$ ist.
+		\item Finden Sie eine Basis des Untervektorraums $\mathcal{F}$.
+	\end{enumerate}
+	
+	\newpage
+	
 	
 \end{document}
