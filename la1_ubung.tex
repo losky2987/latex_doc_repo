@@ -1,0 +1,269 @@
+\documentclass[a4paper,11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Pakete werden geladen. Sie können hier gern weitere hinzufügen.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage[top = 1cm, bottom = 1cm, left = 2cm, right = 2cm, headheight = 0pt, includehead, includefoot, heightrounded]{geometry}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usetikzlibrary{positioning, automata,arrows}
+\usepackage{enumitem}
+\usepackage{booktabs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Wir passen das Layout an
+\fancypagestyle{normalPage}{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0.5pt}
+	\fancyhead[L]{\textbf{Lineare Algebra I Übungsaufgabensammlung}}
+	\fancyfoot[R]{\thepage}
+}
+\setlength{\parskip}{1em}
+\newcommand{\printheader}{
+	\thispagestyle{normalPage}
+	\pagestyle{normalPage}
+}
+%%%% Falls Sie ein anderes Layout haben wollen, passen Sie das gerne an.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+	\printheader
+	
+	
+	\section*{Übung 1 - 2025 Okt. 22}
+	
+	\subsection*{Aufgabe 1}
+	Formulieren Sie die Negation der folgenden Aussagen:
+	\begin{enumerate}[label=(\alph*)]
+		\item Alle Schwäne sind weiß.
+		\item Es gibt mindestens eine gerade Primzahl.
+		\item Wenn es regnet, bleibe ich zu Hause.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Seien $A = {1,2}$, $B = {2,3,4}$ und $X = {1,2,3,4,5}$. Bilden Sie die folgenden Mengen:
+	\begin{enumerate}[label=(\alph*)]
+		\item $A \cup B$
+		\item $A \cap B$
+		\item $X \setminus (A \cup B)$
+		\item $X \setminus (A \cap B)$
+		\item $A \times B$ (kartesisches Produkt von $A$ und $B$)
+		\item $\mathfrak{P}(A)$ (Potenzmenge von $A$)
+		\item $\mathfrak{P}(B)$ (Potenzmenge von $B$)
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Seien $A,B,C,X$ Mengen mit $A \subset X$, $B \subset X$ und $C \subset X$. Beweisen oder widerlegen Sie die folgenden Aussagen:
+	\begin{enumerate}[label=(\alph*)]
+		\item $X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)$
+		\item $(X \setminus A) \cup (X \setminus B) = X$
+		\item $(X \setminus A) \cup (X \setminus B) = \emptyset$
+		\item $(A \cup B) \cap C = (A \cap C) \cup (B \cap C)$
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 2 - 2025 Okt. 29}
+	
+	\subsection*{Aufgabe 1}
+	Seien $X,Y,Z$ Mengen und $f: X \to Y$ und $g: Y \to Z$ Abbildungen. Beweisen oder widerlegen Sie:
+	\begin{enumerate}[label=(\alph*)]
+		\item Ist $g \circ f: X \to Z$ injektiv, so ist $f$ injektiv.
+		\item Ist $g \circ f: X \to Z$ injektiv, so ist $g$ injektiv.
+		\item Ist $g \circ f: X \to Z$ surjektiv, so ist $f$ surjektiv.
+		\item Ist $g \circ f: X \to Z$ surjektiv, so ist $g$ surjektiv.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Seien $X,Y$ Mengen und sei $f: X \to Y$ Abbildung. Außerdem seien $U \subset X$ und $V \to Y$ Teilmengen. Beweisen oder widerlegen Sie:
+	\begin{enumerate}[label=(\alph*)]
+		\item $f^{-1}(f(U)) = U$.
+		\item $f(f^{-1}(V)) = V$.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Seien $X,Y$ nicht-leere Mengen und sei $f: X \to Y$ Abbildung. Beweisen Sie:
+	\begin{enumerate}[label=(\alph*)]
+		\item Die Abbildung $f$ ist genau dann injektiv, wenn es eine weitere Abbildung $g: Y \to X$ gibt mit $g \circ f = id_{X}$.
+		\item Die Abbildung $f$ ist genau dann surjektiv, wenn es eine weitere Abbildung $g: Y \to X$ gibt mit $f \circ g = id_{Y}$.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 4}
+	Wir betrachten die folgenden Relation $\sim$ auf $\mathbb{R}^{2}$: Für Elemente $(a,b),(c,d) \in \mathbb{R}^{2}$ gilt $(a,b) \sim (c,d)$ genau dann, wenn $a^{2} + b^{2} = c^{2} + d^{2}$ gilt. Zeigen Sie: Die Relation $\sim$ ist eine Äquivalenzrelation. Veranschaulichen Sie sich grafisch die Äquivalenzklassen dieser Relation.
+	
+	\newpage
+	
+	\section*{Übung 3 - 2025 Nov. 5}
+	
+	\subsection*{Aufgabe 1}
+	Welche der folgenden Relationen auf $\mathbb{Z}$ sind reflexiv? Welche symmetrisch? Welche transitiv?
+	\begin{enumerate}[label=(\alph*)]
+		\item $x \sim y:\Leftrightarrow x = y$
+		\item $x \sim y:\Leftrightarrow x \leqslant y$
+		\item $x \sim y:\Leftrightarrow x < y$
+		\item $x \sim y:\Leftrightarrow \vert x \vert = \vert y \vert$ (hier ist $\vert x \vert$ bzw. $\vert y \vert$ der Absolutbetrag von $x$ bzw. $y$)
+		\item $x \sim y:\Leftrightarrow x - y$ ist eine gerade ganze Zahl
+		\item $x \sim y:\Leftrightarrow x - y$ ist eine ungerade ganze Zahl
+		\item $x \sim y:\Leftrightarrow xy$ ist eine gerade ganze Zahl
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Sei $X$ eine nicht-leere Menge. Eine Abbildung $f: X \to X$ genau dann bijektiv ist, wenn sie ein Isomorphismus von Mengen ist. Zeigen Sie:
+	\begin{enumerate}[label=(\alph*)]
+		\item Die Identitätsabbildung $id_{X}: X \to X$ ist bijektiv.
+		\item Ist $f: X \to X$ eine bijektive Abbildung, so ist auch ihre Umkehrabbildung $f^{-1}: X \to X$ bijektiv.
+		\item Sind $f: X \to X$ und $g: X \to X$ bijektive Abbildungen, so ist auch die Komposition $g \circ f: X \to X$ bijektiv.
+		\item Bei $Bij(X)$ die Menge aller bijektiven Abbildungen von $X$ nach $X$. Zeigen Sie, dass $(Bij(X), \circ)$, d.h. die Menge $Bij(X)$ zusammen mit der Komposition $\circ$ von Abbildungen als Verknüpfung, eine Gruppe ist.
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 4 - 2025 Nov. 12}
+	
+	\subsection*{Aufgabe 1}
+	Welche der folgenden Mengen mit Verknüpfungen sind Gruppen? Welche Elemente bei den Gruppen sind jeweils die neutralen Elemente bzw. die Inversen?
+	\begin{enumerate}[label=(\alph*)]
+		\item $(\mathbb{Z}, +)$
+		\item $(\mathbb{Z} \setminus \{0\}, \cdot)$
+		\item $(\mathbb{Q}, +)$
+		\item $(\mathbb{Q}, \cdot)$
+		\item $(\mathbb{Q} \setminus \{0\}, \cdot)$
+		\item $(\mathbb{N}_{0}, +)$
+		\item $(\mathbb{R} \setminus \mathbb{Q}, \cdot)$
+		\item $(\{0,1\}, \cdot)$
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Sei $n \geqslant 1$ ganze Zahl.
+	\begin{enumerate}[label=(\alph*)]
+		\item Beweisen Sie: Die Teilmenge $n \mathbb{Z} := \{nm \mid m \in \mathbb{Z}\} \subset \mathbb{Z}$ ist eine normale Untergruppe von $\mathbb{Z}$. Quotientengruppe $(\mathbb{Z} / n \mathbb{Z}, +)$.
+		\item Beweisen Sie: Jedes Element $x \in \mathbb{Z}$ hat genau einen Repräsentanten aus der Menge $\{0,1, \dots, n-1\}$, d.h. $\mathbb{Z} / n \mathbb{Z} = \{[0],[1], \dots, [n-1]\}$. Hinweis: Zu jeder Zahl $x \in \mathbb{Z}$, sodass $x = mn + r$, wobei $r \in \{0,1, \dots, n-1\}$ (Division mit Rest).
+		\item Welche der ganzen Zahlen $0,2,5,9,-201,422,-512,100025,-168999254$ repräsentieren jeweils die Elemente $[0]$ bzw. $[1]$ in $\mathbb{Z} / 2 \mathbb{Z}$?
+		\item Welche der ganzen Zahlen $0,2,5,9,-201,422,-512,100025,-168999254$ repräsentieren jeweils die Elemente $[0]$, $[1]$, $[2]$, $[3]$ oder $[4]$ in $\mathbb{Z} / 5 \mathbb{Z}$?
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Sei $f: (G, \cdot) \to (K, *)$ ein Gruppenhomomorphismus. Zeigen Sie, dass der Kern $ker(f) := \{g \in G \mid f(g) = 1_{K}\} \subset G$ von $f$ eine Untergruppe von $(G, \cdot)$ ist und dass das Bild $im(f) := \{f(g) \in K \mid g \in G\} \subset K$ von $f$ eine Untergruppe von $(K, *)$ ist.
+	
+	\newpage
+	
+	\section*{Übung 5 - 2025 Nov. 19}
+	
+	\subsection*{Aufgabe 1}
+	\begin{enumerate}[label=(\alph*)]
+		\item Zerlegen Sie die folgenden Permutationen in Zyklen: $$\begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 2 & 4 & 5 & 1 & 6 & 3 \end{pmatrix}, \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 1 & 4 & 6 & 5 & 3 & 2 \end{pmatrix}, \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 \\ 6 & 1 & 5 & 2 & 3 & 4 \end{pmatrix} \in S_{6}$$
+		\item Schreiben Sie die folgenden Zyklen als Produkt von Transpositionen: $$\begin{pmatrix} 1 & 4 & 2  \end{pmatrix} \in S_{5}, \begin{pmatrix} 2 & 5 & 4 & 1 \end{pmatrix} \in S_{5}, \begin{pmatrix} 1 & 2 & 3 & 4 & 5 \end{pmatrix} \in S_{6}, \begin{pmatrix} 5 & 1 & 6 & 2 & 7 & 3 & 8 & 4 \end{pmatrix} \in S_{8}$$
+		\item Geben Sie die Inversen der Permutationen bzw. Zyklen aus a) und b) an.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	\begin{enumerate}[label=(\alph*)]
+		\item Berechenen Sie die folgenden Produkte komplexer Zahlen: $$(2+4i) \cdot (1+2i), (-2+5i) \cdot (4-3i), (-1+3i) \cdot (3-5i)$$
+		\item Berechnen Sie die Inversen folgender komplexer Zahlen: $$(2+4i), (1+2i), (4-3i), (-1+3i), (3-5i)$$
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Sei $(G, *)$ Gruppe und $n \in \mathbb{N}$ natürliche Zahl. Man sagt, ein Element $g \in G$ hat Ordnung $n$, falls $g^{n} = 1_{G}$ gilt und $n$ die kleinste natürliche Zahl mit dieser Eigenschaft ist (hier ist $g^{n} = g * \cdots * g$ die $n$-fache Verknüpfung von $g$ mit sich selbst in $G$).
+	\begin{enumerate}[label=(\alph*)]
+		\item Zeigen Sie: Jedes Element $\neq 0$ von $\mathbb{Z}/2\mathbb{Z}$ hat Ordnung $2$.
+		\item Zeigen Sie: Jedes Element $\neq 0$ von $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}$ hat Ordnung $2$.
+		\item Zeigen Sie: Jedes Element $\neq 0$ von $\mathbb{Z}/2\mathbb{Z}[X]$ hat Ordnung $2$ (hier ist $\mathbb{Z}/2\mathbb{Z}[X]$ der Polynomring über $\mathbb{Z}/2\mathbb{Z}$).
+		\item Zeigen Sie: Es kann keinen Gruppenisomorphismus zwischen $\mathbb{Z}$ und $\mathbb{Z}/2\mathbb{Z}[X]$ geben.
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 6 - 2025 Nov. 26}
+	\subsection*{Aufgabe 1}
+	\begin{enumerate}[label=(\alph*)]
+		\item Bilden Sie die folgenden Produkte: $$(2X^{2} + 4X + 1) \cdot (4X^{2} + X) \in \mathbb{Z}[X]$$  $$([1]X^{2} + [1]X + [1]) \cdot ([1]X^{2} + [1]X) \in (\mathbb{Z}/2\mathbb{Z})[X]$$  $$([1]X^{2} + [5]X + [4]) \cdot ([4]X^{2} + [3]X + [2]) \in (\mathbb{Z}/3\mathbb{Z})[X]$$
+		\item Zeigen Sie: Die Polynome $$P = [1]X^{3} + [1]X^{2} + [2]X + [1]$$ und $$Q = [1]X^{2} + [1]$$ sind verschiedene Elemente von $(\mathbb{Z}/3\mathbb{Z})[X]$, aber definieren die gleiche Funktion $\mathbb{Z}/3\mathbb{Z} \to \mathbb{Z}/3\mathbb{Z}$ (d.h. $ev(P) = ev(Q)$).
+		\item Finden Sie für die Polynome $A,B \in \mathbb{Z}[X]$ jeweils Polynome $Q,S \in \mathbb{Z}[X]$ mit $deg(S) < deg(B)$, sodass gilt $A = Q \cdot B + S$: $$A = X^{3} - 3X^{2} + 2X, B = X - 1$$  $$A = 5X^{2} + 3X - 12, B = X - 4$$
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Zeigen Sie:
+	\begin{enumerate}[label=(\alph*)]
+		\item Die Abbildung $\mathbb{R} \to \mathbb{R}, x \mapsto 4x$ ist $\mathbb{R}$-linear.
+		\item Die Abbildung $\mathbb{R} \to \mathbb{R}, x \mapsto x^{2}$ ist nicht $\mathbb{R}$-linear.
+		\item Die Abbildung $\mathbb{R}^{2} \to \mathbb{R}, (x,y) \mapsto x$ ist $\mathbb{R}$-linear.
+		\item Die Abbildung $\mathbb{R} \to \mathbb{R}^{2}, x \mapsto (5x,0)$ ist $\mathbb{R}$-linear.
+		\item Die Abbildung $\mathbb{R}^{2} \to \mathbb{R}, (x,y) \mapsto 2x^{3} + 4y^{3}$ ist nicht $\mathbb{R}$-linear.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Zeigen Sie, dass die folgenden Mengen $\mathbb{R}$-Untervektorräume von $\mathbb{R}^{5}$ definieren:
+	\begin{enumerate}[label=(\alph*)]
+		\item $U = \{(x,0,0,0,0) \mid x \in \mathbb{R}\} \subset \mathbb{R}^{5}$
+		\item $U = \{(x,y,z,0,0) \mid x,y,z \in \mathbb{R}\} \subset \mathbb{R}^{5}$
+		\item $U = \{(x+y,2x+y,z,0,0) \mid x,y,z \in \mathbb{R}\} \subset \mathbb{R}^{5}$
+		\item $U = \{(y+z,x+z,x+y,x,y) \mid x,y,z \in \mathbb{R}\} \subset \mathbb{R}^{5}$
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 7 - 2025 Dez. 3}
+	
+	\subsection*{Aufgabe 1}
+	\begin{enumerate}[label=(\alph*)]
+		\item Seien $v_{1} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ und $v_{2} = \begin{pmatrix} 0 \\ 2 \end{pmatrix}$ Vektoren in $\mathbb{R}^{2}$. Zeigen oder widerlegen Sie, dass $(v_{1}, v_{2})$ eine Basis des $\mathbb{R}$-Vektorraums $\mathbb{R}^{2}$ ist.
+		\item Seien $v_{1} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$ und $v_{2} = \begin{pmatrix} 2 \\ 2 \end{pmatrix}$ Vektoren in $\mathbb{R}^{2}$. Zeigen oder widerlegen Sie, dass $(v_{1}, v_{2})$ eine Basis des $\mathbb{R}$-Vektorraums $\mathbb{R}^{2}$ ist.
+		\item Seien $v_{1} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ und $v_{2} = \begin{pmatrix} 1 \\ 2 \end{pmatrix}$ Vektoren in $\mathbb{R}^{2}$. Zeigen oder widerlegen Sie, dass $(v_{1}, v_{2})$ eine Basis des $\mathbb{R}$-Vektorraums $\mathbb{R}^{2}$ ist.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	Sei $K = \mathbb{Z}/3\mathbb{Z}$. Zeigen Sie, dass die folgenden Mengen $K$-Untervektorräume von $K^{5}$ definieren:
+	\begin{enumerate}[label=(\alph*)]
+		\item $U = \{([2] \cdot x, [0], [0], [0], [0]) \mid x \in K\} \subset K^{5}$
+		\item $U = \{(x + [2] \cdot y, [2] \cdot x + [1] \cdot y, z, [0], [0]) \mid x,y,z \in K\} \subset K^{5}$
+		\item $U = \{(v,w,x,y,z) \mid v,w,x,y,z \in K, v+w+x+y+z = [0]\} \subset K^{5}$
+		\item $U = \{(v,w,x,y,z) \mid v,w,x,y,z \in K, [2] \cdot x + [1] \cdot y = [0]\} \subset K^{5}$
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 3}
+	Sei $K$ ein Körper, sei $V$ ein $K$-Vektorraum und seien $U_{1}, U_{2}, U_{3}$ $K$-Untervektorräume von $V$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Zeigen Sie: Die Formel $U_{1} + (U_{2} \cap U_{3}) = (U_{1} + U_{2}) \cap (U_{1} + U_{3})$ ist \textbf{falsch}. Betrachten Sie dazu $V = \mathbb{R}^{2}$, die Vektoren $v_{1} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$, $v_{2} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$ und $v_{3} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$ sowie die $\mathbb{R}$-Untervektorräume $U_{1} = \langle \{v_{1}\} \rangle$, $U_{2} = \langle \{v_{2}\} \rangle$ und $U_{3} = \langle \{v_{3}\} \rangle$.
+		\item Zeigen Sie: Falls $U_{1} \subset U_{3}$ gilt, so gilt $U_{1} + (U_{2} \cap U_{3}) = (U_{1} + U_{2}) \cap (U_{1} + U_{3})$
+	\end{enumerate}
+	
+	\newpage
+	
+	\section*{Übung 8 - 2025 Dez. 10}
+	
+	\subsection*{Aufgabe 1}
+	Betrachten Sie die Abbildung $f: \mathbb{R}^{2} \to \mathbb{R}^{2}, \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} 0 \\ x-y \end{pmatrix}$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Zeigen Sie, dass $f$ $\mathbb{R}$-linear ist.
+		\item Bestimmen Sie eine Basis des Kerns von $f$.
+		\item Bestimmen Sie eine Basis des Bildes von $f$.
+	\end{enumerate}
+	
+	\subsection*{Aufgabe 2}
+	\begin{enumerate}[label=(\alph*)]
+		\item Zeigen Sie, dass $$U_{1} = \{(w,x,y,z) \mid w,x,y,z \in \mathbb{R}, y-z=0\} \subset \mathbb{R}^{4}$$ einen $\mathbb{R}$-Untervektorraum von $\mathbb{R}^{4}$ definiert und bestimmen Sie eine Basis von $U_{1}$.
+		\item Zeigen Sie, dass $$U_{2} = \{(w,x,y,z) \mid w,x,y,z \in \mathbb{R}, w=0\} \subset \mathbb{R}^{4}$$ einen $\mathbb{R}$-Untervektorraum von $\mathbb{R}^{4}$ definiert und bestimmen Sie eine Basis von $U_{2}$.
+		\item Bestimmen Sie eine Basis von $U_{1} \cap U_{2}$.
+		\item Was ist die Dimension von $U_{1} + U_{2}$?
+	\end{enumerate}
+	
+	
+\end{document}
