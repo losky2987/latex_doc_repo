@@ -1,0 +1,91 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage[top = 1cm, bottom = 1cm, left = 2cm, right = 2cm, headheight = 20pt, includehead, includefoot, heightrounded]{geometry}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usetikzlibrary{positioning, automata,arrows}
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\fancypagestyle{normalPage}{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0.5pt}
+	\fancyhead[L]{Heinrich-Heine-Universität Düsseldorf \\ Stochastik Hauptklausur \\ Prof. Stefan Richter}
+	\fancyhead[R]{WS 2025/2026 \\ 09.02.2026}
+	\fancyfoot[R]{\thepage}
+}
+\setlength{\parskip}{1em}
+\newcommand{\printheader}{
+	\thispagestyle{normalPage}
+	\pagestyle{normalPage}
+}
+
+\begin{document}
+	\printheader
+
+	\section*{Aufgabe 1}
+	Sei $(\Omega, \mathcal{A}, \mathbb{P})$ ein Wahrscheinlichkeitsraum. Außerdem seien Ereignisse $A,B \in \mathcal{A}$ gegeben mit $$\mathbb{P}(A^{c}) = \frac{4}{5} \text{  und  } \mathbb{P}(B) = \frac{3}{10} \text{  und  } \mathbb{P}(A \mid B) = \frac{1}{2}.$$
+	\begin{enumerate}[label=(\alph*)]
+		\item ($\textbf{2P}$) Entscheiden Sie, ob $A$ und $B$ stochastisch unabhängig sind.
+		\item ($\textbf{6P}$) Berechnen Sie $\mathbb{P}(A \cup B)$ und $\mathbb{P}(A^{c} \mid B^{c})$ und $\mathbb{P}(A \setminus B).$
+	\end{enumerate}
+	
+	\section*{Aufgabe 2}
+	Die gemeinsame Dichtfunktion $f: \mathbb{R}^{2} \to \mathbb{R}$ von zwei stetigen Zufallsvariablen $X$ und $Y$ sei gegeben durch $$f(x,y) = 2(x+y) \textbf{1}_{\{0 \leqslant y \leqslant x \leqslant 1\}}.$$
+	\begin{enumerate}[label=(\alph*)]
+		\item (\textbf{3P}) Beweisen Sie, dass $f$ tatsächlich eine Dichtefunktion ist.
+		\item (\textbf{3P}) Berechnen Sie die Verteilungsfunktion von $X$.
+		\item (\textbf{2P}) Berechnen Sie $\mathbb{P}(2Y \geqslant X)$.
+		\item (\textbf{2P}) Berechnen Sie den Erwartungswert von $XY$.
+	\end{enumerate}
+	
+	\section*{Aufgabe 3}
+	Dr. R. hat eine Partei gegründet. Er ist sich sicher, dass 20\% der Bevölkerung die Absicht haben, bei der nächsten Wahl seine Partei zu wählen. Um dies mit einer Umfrage belegen zu können, befragt er $n$ zufällig ausgewählte Personen unabhängig voneinander, ob sie seine Partei wählen werden oder nicht. Berechnen Sie eine untere Schranke für $n$, damit mit einer Wahrscheinlichkeit von mindestens 90\% der Stimmenanteil in der Umfrage zwischen 15\% und 25\% liegt. Benutzen Sie zur Berechnung
+	\begin{enumerate}[label=(\alph*)]
+		\item (\textbf{5P}) einerseite die Tschebyscheff-Ungleichung,
+		\item (\textbf{5P}) andererseits die Binomial-Approximation, aber \underbar{OHNE} Stetigkeitskorrektur $\pm 0.5$.
+	\end{enumerate}
+	
+	\section*{Aufgabe 4}
+	Dr. R. will die Politik seiner Partei an die Altersstruktur der Wähler:innen ausrichten und erhebt in der Umfrage daher auch das Alter der befragten Personen, die seine Partei wählen würden. Zum 5\%-Niveau will Dr. R. nachweisen, dass seine Wähler:innen im Mittel älter als 40 Jahre sind. Er nimmt an, dass die Altersangaben normalverteilt sind und mit einer Standardabweichung von 15 Jahren um das unbekannte Durchschnittsalter $\mu$ streuen. Die erhobenen Daten sind: $$\begin{array}{ccc} 63 & 44 & 25 \\ 54 & 40 & 65 \\ 52 & 40 & 31 \end{array}$$
+	\begin{enumerate}[label=(\alph*)]
+		\item (\textbf{4P}) Geben Sie die Nullhypothese und die Alternativhypothese des Testproblems an und bestimmen Sie einen für die Situation geeigneten Test.
+		\item (\textbf{2P}) Berechnen Sie anhand der Daten ein geeignetes 95\%-Konfidenzintervall für $\mu$.
+		\item (\textbf{2P}) Leiten Sie die Testentscheidung her, die anhand der Daten zu treffen ist. Formulieren Sie eine Aussage zu Ihrer Entscheidung in Bezug zum Sachkontext.
+		\item (\textbf{2P}) Das wahre Durchschnittsalter der Wähler:innen von Dr. R. beträgt 45 Jahre. Berechnen Sie die Fehlerwahrscheinlichkeit 2. Art des Tests aus (a).
+	\end{enumerate}
+	
+	\section*{Aufgabe 5}
+	Für einen unbekannten Parameter $\theta \in \Theta = (2, \infty)$ seien $X_{1}, \dots, X_{n}$ unabhängige und identisch verteilte Zufallsvariablen mit der Dichtefunktion $f_{\theta}: \mathbb{R} \to [0, \infty)$ gegeben durch $$f_{\theta}(x) = \frac{\theta}{x^{\theta + 1}} \mathbf{1}_{[1, \infty)}(x).$$
+	$\textit{(Sie müssen nicht nachweisen, dass $f_{\theta}$ tatsächlich eine Dichtefunktion ist.)}$
+	\begin{enumerate}[label=(\alph*)]
+		\item (\textbf{4P}) Beweisen Sie, dass der Maximum-Likelihood-Schätzer $\hat{\theta}_{n}$ für $\theta$ gegeben ist durch $$\hat{\theta}_{n} = \frac{n}{\Sigma^{n}_{i=1} log(X_{i})}.$$
+		\item (\textbf{2P}) Beweisen Sie, dass $log(X_{1}) \sim Exp(\theta)$.
+		\item (\textbf{4P}) Beweisen Sie, dass $\hat{\theta}_{n}$ konsistent für $\theta$ ist.
+		\item (\textbf{4P}) Beweisen Sie, dass $\hat{\theta}_{n}$ asymptotisch normal für $\theta$ ist. Berechnen Sie die asymptotische Varianz.
+	\end{enumerate}
+	
+	\section*{Aufgabe 6}
+	Der Wert des Integrals $\mu := \int^{1}_{0} \sqrt{cos(x)} dx$ ist nicht mit elementaren Methoden berechenbar und soll daher geschätzt werden. Dazu sei $(X_{i})_{i \in \mathbb{N}}$ eine Folge von unabhängigen und identisch $U_{[0,1]}$-verteilten Zufallsvariablen und für $n \in \mathbb{N}$ sei $$\hat{\mu}_{n} = \frac{1}{n} \Sigma^{n}_{i=1} \sqrt{cos(X_{i})}.$$
+	\begin{enumerate}[label=(\alph*)]
+		\item (\textbf{4P}) Beweisen Sie, dass $\hat{\mu}_{n}$ asymptotisch normal für $\mu$ ist. Berechnen Sie die asymptotische Varianz $\sigma(\mu)^{2}$ in Abhängigkeit von $\mu$.
+		\item (\textbf{3P}) Sie $\alpha \in (0,1)$. Konstruieren Sie ein asymptotisches $(1- \alpha)$-Konfidenzintervall für $\mu$.
+		\item (\textbf{1P}) Berechnen Sie die mittlere quadratische Abweichung (MSE) von $\hat{\mu}_{n}$.
+	\end{enumerate} 
+	
+	
+\end{document}
